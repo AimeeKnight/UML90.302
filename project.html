@@ -8,19 +8,36 @@
 	<title>Aimee Knight</title>
 </head>
 
-
 <body>
+		<nav>
+	    <ul>
+	      <li><a href="index.html">Home</a></li>
+	      <li class="parent"><a href="project.html">Project</a>
+	          <ul class="dropdown">
+	              <li><a href="project.html">Project</a></li>
+	              <li><a href="contact.html">Contact</a></li>
+	          </ul>
+	      </li>
+	    </ul>
+		</nav>
+
 	<div class="container-fluid">
-		<div class="row-fluid">
-			<header class="span12">
-				<nav>
-					<h3>Info</h3>
-						<ul class="nav_hidden">
-							<li class="about"><a href="project.html">Project</a></li>
-							<li class="contact"><a href="form.html">Contact Us</a></li>
-						</ul>
-				</nav>
-			</header>
+
+<!-- 	<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+			    <ul class="nav">
+			      <li><a href="index.html">Home</a></li>
+			      <li><a href="project.html">Project</a>
+			          <ul class="dropdown">
+			              <li><a href="project.html">Project</a></li>
+			              <li><a href="contact.html">Contact</a></li>
+			          </ul>
+			      </li>
+			    </ul>
+			  </div>
+			</nav> -->
+
+	<div class="row-fluid">
 	
 		<div class="hero span3">
 			<h2>Hero WOD'S </h2>
@@ -76,18 +93,19 @@
 				<li>Sprint for 100 meters then complete 30 squats – total of 10 rounds.</li>
 				<li>Run 1/2 mile 50 air squats – 3 rounds.</li>
 			</ul>
-			<hr>
 		</div>	
 
-		<footer class="span12">
-			<p>Copyright 2013 Aimee Knight</p>
-		</footer>
-	</div>
-</div>	
+		</div>
+	</div>		
+
+	<hr>
+	<footer>
+		<p>Copyright 2013 Aimee Knight</p>
+	</footer>	
 
 <script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="javascripts/project.js"></script>
-
+<script type="text/javascript" src="javascripts/script.js"></script>
 </body>
 
 </html>

@@ -2,12 +2,11 @@ $(document).ready(function() {
 	$('.hero_description').hide();
 	$('.hero h4').hover(
 		function() {
-			$(this).next('.hero_description').slideDown('slow');
+			$(this).next('.hero_description').stop().slideDown();
 		},
 		function(){
-			$(this).next('.hero_description').fadeOut();
+			$(this).next('.hero_description').stop().slideUp();
 		});
-});
 
 		var wod = [
 	"10 sit-ups followed by 10 burpees – time 10 rounds of each.",
@@ -37,3 +36,4 @@ $(document).ready(function() {
 		rand = Math.floor(Math.random() * wod.length);
   	$('.generate_wod h4').text(wod[rand]);
 	});
+});	
