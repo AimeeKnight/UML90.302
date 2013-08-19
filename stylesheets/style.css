@@ -24,6 +24,8 @@ nav ul li a:hover {
 	color: #0099CC;
 }
 .dropdown {
+	padding: 0;
+	margin: 0;
 	position: absolute;
 	width: 110px;
 	background: #3b3b3b;
