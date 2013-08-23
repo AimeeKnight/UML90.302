@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<title>Aimee Knight</title>
+</head>
+
+<body>
+		<nav>
+	    <ul>
+	      <li><a href="index.html">Home</a></li>
+	      <li class="parent"><a href="#">Training</a>
+	          <ul class="dropdown">
+	              <li><a href="crossfit.html">Crossfit</a></li>
+	              <li><a href="trails.html">Trails</a></li>
+	          </ul>
+	      </li>
+	      <li><a href="contact.html">Contact</a></li>
+	    </ul>
+		</nav>
+
+	<div class="container-fluid">	
+		<div class="row-fluid">
+	
+		<div id="form" class="span12">
+			<h2>Get In Touch</h2>
+			<form action="MAILTO:#" method="post" enctype="text/plain">
+
+				<label for="name">Name:</label>
+				<input name="name" id="name" type="text" class="required">
+				<span id="name">Your name is required.</span>
+
+				<label for="email">Email:</label>
+				<input name="email" id="email" type="text" class="required"> 
+				<span id="email">A valid email address is required.</span>
+
+				<label for="subject">Subject:</label>
+				<input name="subject" id="subject" type="text"> 
+				<span id="subject">A subject is required.</span>
+
+				<label for="message">Message</label>
+				<textarea name="message" id="message" class="required"></textarea> 
+				<span id="message">A message is required.</span>
+
+				<br>
+				<input type="submit" value="Submit" class="submit">
+			</form>			
+		</div>
+
+		</div>
+	</div>		
+
+	<hr>
+	<footer>
+		<p>Copyright 2013 Aimee Knight</p>
+	</footer>
+
+<script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="javascripts/script.js"></script>
+<script>
+$(document).ready(function(){
+	$('span').hide();
+	$('.submit').click(function(e){
+
+		$('span').hide();
+			var $name = $('input#name').val();
+				if ($name == "") {
+					$('span#name').show();
+					e.preventDefault();
+				}	
+
+			var $email = $('input#email').val();
+				if ($email == "" || $email.indexOf('@') == -1) {
+					$('span#email').show();
+					e.preventDefault();
+				}	
+
+			var $subject = $('input#subject').val();
+				if ($subject == "") {
+					$('span#subject').show();
+					e.preventDefault();
+				}	
+
+			var $message = $('textarea#message').val();
+				if ($message == "") {
+					$('span#message').show();
+					e.preventDefault();
+				}	
+	});
+});	
+</script>
+</body>
+</html>
