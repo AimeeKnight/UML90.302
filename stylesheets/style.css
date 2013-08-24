@@ -52,7 +52,7 @@ footer {
 	text-align: center;
 }
 
-/********** PROJECT **********/
+/********** CROSSFIT **********/
 div.hero {
 	text-align: center;
 }
@@ -64,6 +64,34 @@ div.hero {
 }
 .generate_wod {
 	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/********** FORM **********/
+#form span {
+	background-color: #e74c3c;
+	color: #FFF;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/********** ROLLOVER **********/
+.title {
+	display: block;
+  font-size: 12pt;
+  position: absolute;
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  background-color: #000;
+  padding: 15px;
+  color: #FFF;
+}
+#gallery h2 {
+	text-align: center;
+}
+#gallery img {
+	border-radius: 5px;
 	margin-right: auto;
 	margin-left: auto;
 }
