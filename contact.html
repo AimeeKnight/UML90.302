@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- 	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<title>Aimee Knight</title>
 </head>
@@ -30,20 +30,32 @@
 			<form action="MAILTO:#" method="post" enctype="text/plain">
 
 				<label for="name">Name:</label>
+				<br />
 				<input name="name" id="name" type="text" class="required">
 				<span id="name">Your name is required.</span>
+				<br />
+				<br />
 
 				<label for="email">Email:</label>
+				<br />
 				<input name="email" id="email" type="text" class="required"> 
-				<span id="email">A valid email address is required.</span>
+				<span id="email">Your email has not be sent. A valid email address is required. Please enter a valid email and resubmit.</span>
+				<br />
+				<br />
 
 				<label for="subject">Subject:</label>
+				<br />
 				<input name="subject" id="subject" type="text"> 
 				<span id="subject">A subject is required.</span>
+				<br />
+				<br />
 
 				<label for="message">Message</label>
-				<textarea name="message" id="message" class="required"></textarea> 
+				<br />
+				<textarea name="message" id="message" class="required" rows="10" cols="50"></textarea> 
 				<span id="message">A message is required.</span>
+				<br />
+				<br />
 
 				<br>
 				<input type="submit" value="Submit" class="submit">
@@ -62,33 +74,36 @@
 <script type="text/javascript" src="javascripts/script.js"></script>
 <script>
 $(document).ready(function(){
+	var match = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
 	$('span').hide();
 	$('.submit').click(function(e){
 
 		$('span').hide();
-			var $name = $('input#name').val();
-				if ($name == "") {
-					$('span#name').show();
-					e.preventDefault();
-				}	
+			// var $name = $('input#name').val();
+			// 	if ($name == "") {
+			// 		$('span#name').show();
+			// 		e.preventDefault();
+			// 	}	
 
 			var $email = $('input#email').val();
-				if ($email == "" || $email.indexOf('@') == -1) {
+				if ($email.search(match) == -1) {
 					$('span#email').show();
+					$('input#email').focus();
 					e.preventDefault();
 				}	
 
-			var $subject = $('input#subject').val();
-				if ($subject == "") {
-					$('span#subject').show();
-					e.preventDefault();
-				}	
+			// var $subject = $('input#subject').val();
+			// 	if ($subject == "") {
+			// 		$('span#subject').show();
+			// 		e.preventDefault();
+			// 	}	
 
-			var $message = $('textarea#message').val();
-				if ($message == "") {
-					$('span#message').show();
-					e.preventDefault();
-				}	
+			// var $message = $('textarea#message').val();
+			// 	if ($message == "") {
+			// 		$('span#message').show();
+			// 		e.preventDefault();
+			// 	}	
 	});
 });	
 </script>
