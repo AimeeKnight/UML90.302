@@ -79,19 +79,39 @@ $(document).ready(function(){
 	$('span').hide();
 	$('.submit').click(function(e){
 
-		$('span').hide();
 			// var $name = $('input#name').val();
 			// 	if ($name == "") {
 			// 		$('span#name').show();
 			// 		e.preventDefault();
 			// 	}	
 
+			// var $email = $('input#email').val();
+			// 	if ($email.search(match) == -1) {
+			// 		$('span#email').show();
+			// 		$('input#email').focus();
+			// 		e.preventDefault();
+			// 	}	
+
 			var $email = $('input#email').val();
-				if ($email.search(match) == -1) {
-					$('span#email').show();
-					$('input#email').focus();
-					e.preventDefault();
-				}	
+			var domains = ['.com', '.org', '.net']
+
+        		if ($email == "") {
+							$('span#email').show();
+							$('input#email').focus();
+							e.preventDefault();
+						} else if ($email.indexOf('@') == -1) {
+							$('span#email').show();
+							$('input#email').focus();
+							e.preventDefault();
+						} else if ($email.indexOf('.com') == -1 
+										&& $email.indexOf('.org') == -1
+										&& $email.indexOf('.net') == -1)
+						{
+							$('span#email').show();
+							$('input#email').focus();
+							e.preventDefault();
+						} 
+
 
 			// var $subject = $('input#subject').val();
 			// 	if ($subject == "") {
