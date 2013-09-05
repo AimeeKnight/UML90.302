@@ -1,0 +1,132 @@
+/********** BOOTSTRAP CLEANUP **********/
+.container-fluid {
+	margin-top: 80px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.row-fluid {
+	width: 100%
+}
+#gallery {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center
+}
+.well {
+	padding: 20px 10px;
+	width: 400px;
+	background-color: #27ae60;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/********** NAV **********/
+nav {
+	background: #272727;
+	float: left;
+	width: 100%;
+ 	position:fixed;
+ 	top:0px;
+ 	left: 0px;
+ 	margin: 0px;
+ 	padding: 0px;
+}
+nav ul {
+	text-align: center;
+}
+nav ul li {
+	float: left;
+	display: inline;
+}
+nav ul li:hover {
+	color: #fff;
+}
+nav ul li a {
+	display: block;
+	padding: 15px 25px;
+	color: #c6c6c6;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	text-decoration: none;
+	color: #0099CC;
+}
+.dropdown {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	width: 110px;
+	background: #3b3b3b;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.dropdown li {
+	width: 110px;
+}
+.dropdown li a {
+	display: block;
+	padding: 15px 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/********** HEADER **********/
+.row-fluid {
+	margin-top: 55px;
+}
+
+/********** FOOTER **********/
+footer {
+	width: 100%;
+	text-align: center;
+}
+
+/********** CROSSFIT **********/
+div.hero {
+	text-align: center;
+}
+.wod h2 {
+	text-align: center;
+}
+.wod h4 {
+	text-align: center;
+	color: #3498db;
+}
+.generate_wod {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/********** FORM **********/
+#form span {
+	background-color: #e74c3c;
+	color: #FFF;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/********** ROLLOVER **********/
+.title {
+	display: block;
+  font-size: 12pt;
+  position: absolute;
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  background-color: #000;
+  padding: 15px;
+  color: #FFF;
+}
+#gallery h2 {
+	text-align: center;
+}
+#gallery img {
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}

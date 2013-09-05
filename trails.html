@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<title>Aimee Knight</title>
+</head>
+
+<body>
+		<nav>
+	    <ul>
+	      <li><a href="index.html">Home</a></li>
+	      <li class="parent"><a href="#">Training</a>
+	          <ul class="dropdown">
+	              <li><a href="crossfit.html">Crossfit</a></li>
+	              <li><a href="trails.html">Trails</a></li>
+	          </ul>
+	      </li>
+	      <li><a href="contact.html">Contact</a></li>
+	    </ul>
+		</nav>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+
+		<div class="span8 offset2">
+			<div id="gallery"> 
+				<h2>Running Trails</h2>
+				<a href="images/muir_c.jpg"><img src="images/muir.jpg" width="250px" height="250px" alt="muir beach"></a>
+				<a href="images/sausalito_c.jpg"><img src="images/sausalito.jpg" width="250px" height="250px" alt="sausalito"></a>
+				<a href="images/sonoma_c.jpg"><img src="images/sonoma.jpg" width="250px" height="250px" alt="sonoma"></a>
+			</div>
+ 		</div>
+
+		</div>
+	</div>		
+
+	<hr>
+	<footer>
+		<p>Copyright 2013 Aimee Knight</p>
+	</footer>
+
+<script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="javascripts/script.js"></script>
+<script>
+$(document).ready(function(){
+
+	$('#gallery img').each(
+		function() {
+			var bwImg = $(this).attr('src');
+			var colorImg = new Image();
+			var imgExt = /(\.\w{3,4}$)/;
+			colorImg.src = bwImg.replace(imgExt,'_c$1');
+
+	$(this).mouseover(
+		function() {
+			$(this).attr('src', colorImg.src);
+	}).mouseout(
+		function() {
+			$(this).attr('src', bwImg);
+		});
+	}); 
+
+	$('#gallery img').hover(
+	function() {
+		var imgTitle = $(this).attr('alt');
+		var placement = $(this).offset();
+		$('<span class="title"></span>').text(imgTitle)
+			.stop()
+			.appendTo('body')
+			.css('top', (placement.top + 20) + 'px')
+			.css('left', placement.left + 20) 
+			.show();
+	}, 
+	function() {
+			$('.title').stop().remove();
+	});
+
+});
+</script>
+</body>
+</html>
