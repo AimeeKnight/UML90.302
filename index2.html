@@ -3,6 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<title>Aimee Knight</title>
 </head>
@@ -10,13 +11,32 @@
 <body>
 		<nav>
 	    <ul>
-	      <li><a ></a></li>
-	      <li><a ></a></li>
-	      <li><a ></a></li>
+	      <li><a href="index.html">Home</a></li>
+	      <li class="parent"><a href="#">Training</a>
+	          <ul class="dropdown">
+	              <li><a href="crossfit.html">Crossfit</a></li>
+	              <li><a href="trails.html">Trails</a></li>
+	          </ul>
+	      </li>
+	      <li><a href="contact.html">Contact</a></li>
 	    </ul>
 		</nav>
 
 <div class="container-fluid">
+
+<!-- 	<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+			    <ul class="nav">
+			      <li><a href="index.html">Home</a></li>
+			      <li><a href="project.html">Project</a>
+			          <ul class="dropdown">
+			              <li><a href="project.html">Project</a></li>
+			              <li><a href="contact.html">Contact</a></li>
+			          </ul>
+			      </li>
+			    </ul>
+			  </div>
+			</nav> -->
 
 	<div class="row-fluid">
 
@@ -25,7 +45,7 @@
 					<h2>TUTORIALS</h2>
 				</header>
 					<ul>
-						<!-- <h4>Week 2</h4>
+						<h4>Week 2</h4>
 							<li><a href="jQmm/chapter02/use_variable.html">Using Variables to Create Messages</a></li>
 							<li><a href="jQmm/chapter02/prompt.html">Asking for Information</a></li>
 						<h4>Week 3</h4>
@@ -45,7 +65,7 @@
 							<li><a href="jQmm/chapter08/in-page-links.html">Opening a Page Within a Page</a></li>
 						<h4>Week 9</h4>
 							<li><a href="jQmm/chapter09/form.html">Basic Form Enhancements</a></li>
-							<li><a href="jQmm/chapter09/validation.html">Validation</a></li> -->
+							<li><a href="jQmm/chapter09/validation.html">Validation</a></li>
 					</ul>
 			</div>
 			<br />
@@ -55,14 +75,14 @@
 					<h2>PROJECTS</h2>
 				</header>
 					<ul>
-						<!-- <h4>Project 1</h4>
+						<h4>Project 1</h4>
 							<li><a href="trails.html">Running Trails Gallery</a></li>
 						<h4>Project 2</h4>
 							<li><a href="contact.html">Contact Form</a></li>
 						<h4>Project 3</h4>
 							<li><a href="crossfit.html">Dropdown (throughout site)</a></li>
 						<h4>Extras</h4>
-							<li><a href="crossfit.html">Crossfit</a></li> -->
+							<li><a href="crossfit.html">Crossfit</a></li>
 					</ul>
 			</div>
 
@@ -74,4 +94,7 @@
 		<p>Copyright 2013 Aimee Knight</p>
 	</footer>
 
+<script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="javascripts/script.js"></script>
+</body>
 </html>
