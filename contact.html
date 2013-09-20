@@ -65,7 +65,6 @@
 		</div>
 	</div>		
 
-	<hr>
 	<footer>
 		<p>Copyright 2013 Aimee Knight</p>
 	</footer>
@@ -103,14 +102,16 @@ $(document).ready(function(){
 							$('span#email').show();
 							$('input#email').focus();
 							e.preventDefault();
-						} else if ($email.indexOf('.com') == -1 
-										&& $email.indexOf('.org') == -1
-										&& $email.indexOf('.net') == -1)
+						} else if ($email.indexOf('.com') == -1  // ^[.com]$
+										&& $email.indexOf('.org') == -1  // ^[.org]$
+										&& $email.indexOf('.net') == -1) // ^[.net]$
 						{
 							$('span#email').show();
 							$('input#email').focus();
 							e.preventDefault();
-						} 
+						} else {
+							$('span').hide();
+						}
 
 
 			// var $subject = $('input#subject').val();
