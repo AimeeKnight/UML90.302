@@ -95,6 +95,7 @@ $(document).ready(function(){
 			var domains = ['.com', '.org', '.net']
 
         		if ($email == "") {
+        			alert('email will not be sent');
 							$('span#email').show();
 							$('input#email').focus();
 							e.preventDefault();
