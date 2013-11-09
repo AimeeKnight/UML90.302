@@ -10,6 +10,7 @@ $(document).ready(function() {
 	);
 });
 
+// jQuery NAV plugin
 // $(document).ready(function() {
 //   $("#navigation").navPlugin({
 // 	  'itemWidth': 150,
